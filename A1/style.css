@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     /* Picture provide by JR */
-    background-image: url(images/bg.jpg);
+    background-image: url(images/david-becker-QRVY1g2URDA-unsplash.jpg);
     background-size: cover;
 }
 
@@ -76,6 +76,7 @@ body {
     outline: none;
     padding: 0 10px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .box .input-box > input::placeholder {
@@ -167,7 +168,6 @@ body {
 }
 
 /* Select */
-
 .box .input-box > select {
     box-sizing: border-box;
     width: 250px;
@@ -182,4 +182,25 @@ body {
     padding: 0 10px;
     letter-spacing: 1px;
     text-align: center;
+}
+
+/* Submission Hint */
+.submit-hint {
+    display: none;
+    width: 350px;
+    height: 100pv;
+    background: rgba(50,50,50,0.2);
+    /* border setting */
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    /* font */
+    color: rgba(255,255,255,0.9);
+    font-size: 60px;
+    /* word position in center */ 
+    text-align: center;
+    padding: 5px;
 }

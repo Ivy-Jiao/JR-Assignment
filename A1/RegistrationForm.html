@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <!-- CSS File -->
-    <link rel="stylesheet" href="style.css"></line>
+    <!-- Link to external CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    
     
 </head>
 <body>
     <!-- #: submit data in this page, remove autocomplete -->
-    <form action="#" method="POST">
+    <form id="registration-form" action="#" method="POST">
         <div class="box">
             <h2>Registration Form</h2>
 
@@ -37,12 +38,14 @@
             <!-- Password (password input field with appropriate attributes to ensure security) -->
             <div class="input-box">
                 <label for="password">Password :</label>
-                <input type="password" name="password" id="password"  autocomplete="off" minlength="8" required >
+                <input type="password" name="password" id="password"  autocomplete="off" minlength="8" required pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}"
+                title="Password must be at least 8 characters long, contain at least one letter, one number, and one special character">
             </div>
             <!-- Confirm Password (password input field) -->
             <div class="input-box">
                 <label for="confirm-password">Confirm Password :</label>
-                <input type="password" name="confirm-password" id="confirm-password"  autocomplete="off" minlength="8" required>
+                <input type="password" name="confirm-password" id="confirm-password"  autocomplete="off" minlength="8" >
+                <div class="error" id="password-error" style="display: none;color: red;">Passwords do not match.</div>
             </div>
             <!-- Date of Birth (date picker) -->
             <div class="input-box">
@@ -63,7 +66,7 @@
             <!-- About Me (textarea) -->
             <div class="input-box">
                 <label for="about-me">About Me:</label>
-                <textarea id="about-me" name="about-me" rows="5" required></textarea>
+                <textarea id="about-me" name="about-me" rows="3" required></textarea>
             </div>
             <!-- Choose Your Profession (dropdown list with options like "Web Development", "Data Analytics", "UI/UX Design", etc.) -->
             <div class="input-box">
@@ -73,6 +76,7 @@
                     <option value="web-development">Web Development</option>
                     <option value="data-analytics">Data Analytics</option>
                     <option value="ui-ux-design">UI/UX Design</option>
+                    <option value="ui-ux-design">Others</option>
                 </select>
             </div>
             <!-- Submit Button -->
@@ -83,10 +87,13 @@
             </div>
         </div>
     </form>
+
+    <!-- Success Message -->
+    <div class="submit-hint" id="success-message">
+        Submitted Successfully!
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
 </body>
 </html>
-
-<!-- <div class="input-box">
-    <label for="">:</label>
-    <input type="" name="" id="" placeholder="" autocomplete="off" required>
-</div> -->
