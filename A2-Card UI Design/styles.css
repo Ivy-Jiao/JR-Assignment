@@ -49,21 +49,21 @@ body {
 }
 
 /* Each Card */
-.card1 {
+.card-purple {
     /* Gradient background */
     background: linear-gradient(135deg, rgba(121, 139, 234, 1) 0%, rgba(133,  129, 215, 0.7) 50%, rgba(161, 143, 211, 0.5) 100%), url('images/card1_bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.card2 {
+.card-blue {
     /* Gradient background */
     background: linear-gradient(135deg, rgba(70, 111, 229, 1) 0%, rgba(88, 148, 194, 0.7) 50%, rgba(116, 196, 170, 0.5) 100%), url('images/card2-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.card3 {
+.card-green {
      /* Gradient background */
      background: linear-gradient(135deg, rgba(7, 93, 27, 1) 0%, rgba(43, 222, 133, 0.7) 50%, rgba(197, 219, 36, 0.5) 100%), url('images/card3-bg.jpg');
      background-size: cover;
