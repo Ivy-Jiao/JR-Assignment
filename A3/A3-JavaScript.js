@@ -25,6 +25,7 @@ function itemLess5(list) {
 itemLess5(shoppingList);
 
 // 使用循环语句遍历购物清单，将每一项物品在控制台上以编号的形式输出。例如：
+// @param {Array} list - 购物清单
 function cycleList(list){
     for (let i = 0; i < list.length; i++) {
         console.log(i + 1, list[i]);
@@ -35,7 +36,20 @@ cycleList(shoppingList);
 
 /* 函数与对象：
 * 创建一个函数，该函数接受物品名称作为参数，并返回该物品是否在购物清单中。
+* @param {Array} list - 购物清单
+* @param {String} item - 物品名称
 * 创建一个购物物品对象，其中包括物品名称、价格和数量。例如:
 */
-function isItemExist(item) {
+let item = {
+    name: "milk",
+    price: 3.4,
+    quantity: 2
+};
+function isItemExist(list, item) {
+    if (list.includes(item.name)) {
+        console.log(item.name +" is in the shopping list");
+    } else {
+        console.log(item.name +"is not in the shopping list");
+    }
 }
+isItemExist(shoppingList, item);
